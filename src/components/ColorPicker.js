@@ -17,6 +17,11 @@ function ColorPicker({noteCard, notesCards, updateNotesCards, setToggleColorPick
             headerBgColor: '#00FF00',
             contentBgColor: '#7CFC00',
             name:'Green'
+        },
+        {
+            headerBgColor: '#FF1493',
+            contentBgColor: '#FF69B4',
+            name:'Pink'
         }
     ];
     const listColors = COLORS.map(color => <Color color={color} noteCard={noteCard} notesCards={notesCards} updateNotesCards={updateNotesCards} setToggleColorPicker={setToggleColorPicker}/>);
