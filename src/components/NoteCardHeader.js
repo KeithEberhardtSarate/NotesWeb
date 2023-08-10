@@ -1,8 +1,12 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrash, faPalette, faPlus } from '@fortawesome/free-solid-svg-icons';
 import React from 'react';
+import { useState } from 'react';
+import ColorPicker from './ColorPicker';
 
 function NoteCardHeader({noteCard, notesCards, updateNotesCards}) {
+    const [toggleColorPicker, setToggleColorPicker] = useState(false);
+
     const handleChange = (event) => {
         const newContent = event.target.textContent;
         console.log(newContent);
@@ -33,14 +37,19 @@ function NoteCardHeader({noteCard, notesCards, updateNotesCards}) {
         notesCardsCopy.splice(index, 1);
         
         updateNotesCards(notesCardsCopy);
+    };    
+
+    const handleColorPaletteClick = () => {        
+        setToggleColorPicker(!toggleColorPicker);
     };
 
     return (
         <div className='note-card-header'
              style={{'background-color': noteCard.headerBgColor}}>
-            <div className='card-icon'>
+            <div className='card-icon' onClick={handleColorPaletteClick}>
                 <FontAwesomeIcon icon={faPalette} />
             </div>
+            {toggleColorPicker && <ColorPicker noteCard={noteCard} notesCards={notesCards} updateNotesCards={updateNotesCards} setToggleColorPicker={setToggleColorPicker}/>}
             <div className='card-title card-header-editable-area'
                  contentEditable='true'
                  onInput={handleChange}>{noteCard.title}</div>
