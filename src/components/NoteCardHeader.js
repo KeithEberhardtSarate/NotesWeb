@@ -13,7 +13,7 @@ function NoteCardHeader({noteCard, notesCards, updateNotesCards}) {
 
         notesCardsCopy.push(
             {
-              id: notesCards.length + 1,
+              id: notesCardsCopy[notesCardsCopy.length - 1].id + 1,
               title: '',
               headerBgColor: 'yellow',
               contentBgColor: 'Khaki',
@@ -23,7 +23,16 @@ function NoteCardHeader({noteCard, notesCards, updateNotesCards}) {
           );
         
         updateNotesCards(notesCardsCopy);
-        console.log(notesCards);
+    };
+
+    const handleDeleteNote = id => {        
+        let notesCardsCopy = notesCards.map(note => {return note});
+
+        const index = notesCardsCopy.indexOf(notesCardsCopy.filter(x => x.id === id)[0]);
+
+        notesCardsCopy.splice(index, 1);
+        
+        updateNotesCards(notesCardsCopy);
     };
 
     return (
@@ -39,7 +48,7 @@ function NoteCardHeader({noteCard, notesCards, updateNotesCards}) {
                 <div className='card-icon' onClick={handleAddNewNote}> 
                     <FontAwesomeIcon icon={faPlus} />
                 </div>    
-                <div className='card-icon'>
+                <div className='card-icon' onClick={() => handleDeleteNote(noteCard.id)}>
                     <FontAwesomeIcon icon={faTrash} />
                 </div>                   
             </div>

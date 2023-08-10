@@ -29,8 +29,11 @@ html {
 }
 
 .note-card{  
-  width: 210px;
+  width: 220px;
   margin: 5px;
+  -webkit-box-shadow: 10px 10px 16px -11px rgba(0,0,0,0.65);
+  -moz-box-shadow: 10px 10px 16px -11px rgba(0,0,0,0.65);
+  box-shadow: 10px 10px 16px -11px rgba(0,0,0,0.65);
 }
 
 .note-card-header{
@@ -73,4 +76,9 @@ html {
 
 .card-header-editable-area:focus {
   outline: none;
+}
+
+.notes-cards-list-empty{
+  text-align: center;
+  padding: 40px;
 }

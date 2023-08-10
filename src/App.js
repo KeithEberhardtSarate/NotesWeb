@@ -3,6 +3,7 @@ import { useState } from 'react';
 import './App.css';
 import Header from './components/Header';
 import NotesCardsList from './components/NotesCardsList';
+import NotesCardsListEmpty from './components/NotesCardsListEmpty';
 
 function App() {
   // Just for the static version
@@ -42,7 +43,7 @@ function App() {
   return (
     <div className='App'>
       <Header notesCards={notesCards}/>
-      <NotesCardsList notesCards={notesCards} updateNotesCards={updateNotesCards}/>
+      {notesCards.length ? <NotesCardsList notesCards={notesCards} updateNotesCards={updateNotesCards}/> : <NotesCardsListEmpty notesCards={notesCards} updateNotesCards={updateNotesCards} />}      
     </div>
   );
 }
