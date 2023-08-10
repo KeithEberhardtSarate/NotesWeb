@@ -5,7 +5,7 @@ function NotesCardsList({notesCards}) {
     const listNotesCards = notesCards.map(noteCard => <NoteCard noteCard={noteCard}/>);
 
     return (
-        <div>
+        <div className='notes-cards-list'>
             {listNotesCards}
         </div>
     );

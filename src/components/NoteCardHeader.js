@@ -1,9 +1,10 @@
 import React from 'react';
 
-function NoteCardHeader() {
+function NoteCardHeader({noteCard}) {
     return (
-        <div>
-            Note Card Header
+        <div className='note-card-header'
+        style={{'background-color': noteCard.headerBgColor}}>
+            {noteCard.title}
         </div>
     );
 }

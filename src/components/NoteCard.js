@@ -4,9 +4,9 @@ import NoteCardContent from './NoteCardContent';
 
 function NoteCard({noteCard}) {
     return (
-        <div>
-            <NoteCardHeader />
-            <NoteCardContent notes={noteCard.notes}/>
+        <div className='note-card'>
+            <NoteCardHeader noteCard={noteCard}/>
+            <NoteCardContent noteCard={noteCard}/>
         </div>
     );
 }

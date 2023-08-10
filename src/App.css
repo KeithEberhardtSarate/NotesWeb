@@ -1,6 +1,41 @@
-.App {
-  text-align: center;
+html {
+  background-color: LightYellow;
 }
-.test{
-  border: 1px solid red;
+
+.App {
+  display: flex;
+  flex-direction: column;
+}
+
+.header, .footer{
+  padding: 15px 10% 15px 10%;
+}
+
+.header{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #1C1C1C;
+  color: white;
+}
+
+.notes-cards-list{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;  
+  padding: 30px 10% 30px 10%;
+}
+
+.note-card{  
+  width: 210px;
+  margin: 5px;
+}
+.note-card-header{
+  padding: 10px;
+}
+
+.note-card-content{
+  padding: 15px 10px 15px 10px;
 }

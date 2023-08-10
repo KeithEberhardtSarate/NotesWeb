@@ -1,12 +1,11 @@
 import React from 'react';
 import Note from './Note';
 
-function NoteCardContent({notes}) {
-    const listNotes = notes.map(note => <Note note={note.content}/>);
-
+function NoteCardContent({noteCard}) {
     return (
-        <div>
-            {listNotes}
+        <div className='note-card-content'
+        style={{'background-color': noteCard.contentBgColor}}>
+            <Note note={noteCard.notes}/>
         </div>
     );
 }

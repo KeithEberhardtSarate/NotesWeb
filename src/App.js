@@ -8,35 +8,27 @@ const COLORS = [{'Blue':''}, {'Green':''}, {'Yellow':''}];
 const NOTES_CARDS = [
   {
     id:'1',
-    title: 'Test',
-    bgColor: '',
+    title: 'Title 1',
+    headerBgColor: 'yellow',
+    contentBgColor: 'Khaki',
     font: '',
-    notes: [
-      {
-        id:1,
-        content: 'Some notes here'
-      },
-      {
-        id:2,
-        content: 'Any other notes here'
-      }
-    ]
+    notes: '- Some notes here'
   },
   {
     id:'2',
-    title: 'Test2',
-    bgColor: '',
+    title: 'Title 2',
+    headerBgColor: 'yellow',
+    contentBgColor: 'Khaki',
     font: '',
-    notes: [
-      {
-        id:1,
-        content: 'Other note'
-      },
-      {
-        id:2,
-        content: 'Yeah, it is a note'
-      }
-    ]
+    notes: '- Some notes here'
+  },
+  {
+    id:'3',
+    title: 'Title 3',
+    headerBgColor: 'yellow',
+    contentBgColor: 'Khaki',
+    font: '',
+    notes: '- Some notes here'
   }
 ];
 
