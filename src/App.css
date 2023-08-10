@@ -32,10 +32,45 @@ html {
   width: 210px;
   margin: 5px;
 }
+
 .note-card-header{
-  padding: 10px;
+  display: flex;
+  justify-content: space-between;  
 }
 
-.note-card-content{
+.note-card-content{  
+  cursor: text;
+}
+
+.card-action-container{
+  display: flex;
+}
+
+.card-title{
+  padding: 10px 0 10px 0;
+  width: 100%;
+  cursor: text;
+}
+
+.card-icon{
+  padding: 10px;
+  cursor: pointer;
+}
+
+.card-content-editable-area {
+  border: none;
   padding: 15px 10px 15px 10px;
+  min-height: 100px;
+}
+
+.card-content-editable-area:focus {
+  outline: none;
+}
+
+.card-header-editable-area{
+  border: none;
+}
+
+.card-header-editable-area:focus {
+  outline: none;
 }
